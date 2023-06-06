@@ -6,6 +6,7 @@ import './App.css';
 // import About from "./components/About/About";
 // import Contact from "./components/Contact/Contact";
 
+/* Code Splitting in ReactJS Using Lazy function */
 // Dynamically importing the components using lazy
 const Home1 = lazy(() => import("./components/Home/Home1"));
 const Home = lazy(() => import("./components/Home/Home"));

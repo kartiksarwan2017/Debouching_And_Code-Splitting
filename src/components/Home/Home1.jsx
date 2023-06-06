@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 
+/* Debouncing in ReactJS */
 const Home1 = () => {
 
   const [nameVal, setNameVal] = useState("");
