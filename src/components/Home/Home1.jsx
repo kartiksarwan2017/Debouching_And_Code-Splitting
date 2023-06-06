@@ -7,18 +7,24 @@ const Home1 = () => {
 
   useEffect(() => {
 
-    const getUserData = async () => {
-      try {
+     const timeOutId =  setTimeout(async () => {
+          
+          try {
 
-        const {data} = await axios.get(`https://randomuser.me/api/?name=${nameVal}`);
+            const {data} = await axios.get(`https://randomuser.me/api/?name=${nameVal}`);
 
-        console.log(data.results[0].email);
-      }catch(error){
-        console.log(error);
+            console.log(data.results[0].email);
+          }catch(error){
+            console.log(error);
+          } 
+      }, 1000);
+
+      // console.log("useEffect working here");
+
+      return () => {
+        // console.log("useEffect clean up here");
+        clearTimeout(timeOutId);
       }
-    }
-
-    getUserData();
 
   }, [nameVal]);
 
